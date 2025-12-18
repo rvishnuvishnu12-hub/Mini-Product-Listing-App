@@ -1,81 +1,76 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
+const desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio fuga omnis deleniti quibusdam quasi, recusandae repudiandae impedit, aspernatur fugit, molestiae mollitia inventore. Blanditiis suscipit at fugit expedita tempora, id ex."
 
-const desc =
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio fuga omnis deleniti quibusdam quasi, recusandae repudiandae impedit, aspernatur fugit, molestiae mollitia inventore.";
 
-const ProductDisplay = ({ item }) => {
-  if (!item) return null;
+const ProductDisplay = ({item}) => {
+    console.log(item)
+    const {name, id, price, seller, ratingsCount, quantity} =item;
 
-  const { name, price, seller, ratingsCount, quantity } = item;
+    const [prequantity, setQuantity] =useState(quantity);
+    const [coupon, setCoupon] =useState("");
+    const [size, setSize] = useState("Select Size");
+    const [color, setColor] = useState("Select Color");
 
-  const [qty, setQty] = useState(quantity || 1);
-  const [size, setSize] = useState("");
-  const [color, setColor] = useState("");
+    const handleSizeChange =(e) => {
+        setSize(e.target.value);
+    }
 
-  const increaseQty = () => setQty((p) => p + 1);
-  const decreaseQty = () => setQty((p) => (p > 1 ? p - 1 : 1));
-
+      const handleColorChange =(e) => {
+        setColor(e.target.value);
+    }
+ 
   return (
-    <div className="product-display">
-      {/* Product Info */}
-      <div className="product-content">
-        <h4>{name}</h4>
-
-        <p className="rating">
-          <i className="icofont-star"></i>
-          <i className="icofont-star"></i>
-          <i className="icofont-star"></i>
-          <i className="icofont-star"></i>
-          <i className="icofont-star"></i>
-          <span> ({ratingsCount} reviews)</span>
-        </p>
-
-        <h4 className="price">${price}</h4>
-        <h6>Seller: {seller}</h6>
-        <p>{desc}</p>
-      </div>
-
-      {/* Cart */}
-      <form className="cart-form">
-        {/* Size */}
-        <div className="select-box">
-          <select value={size} onChange={(e) => setSize(e.target.value)}>
-            <option value="">Select Size</option>
-            <option value="SM">SM</option>
-            <option value="MD">MD</option>
-            <option value="LG">LG</option>
-            <option value="XL">XL</option>
-            <option value="XXL">XXL</option>
-          </select>
-          <i className="icofont-rounded-down"></i>
+    <div>
+        <div>
+            <h4>{name}</h4>
+            <p className='rating'>
+              <i className='icfont-start'></i>
+              <i className='icfont-start'></i>
+              <i className='icfont-start'></i>
+              <i className='icfont-start'></i>
+              <i className='icfont-start'></i>
+              <span>{ratingsCount} review</span>
+            </p>
+            <h4>${price}</h4>
+            <h6>{seller}</h6>
+            <p>{desc}</p>
         </div>
 
-        {/* Color */}
-        <div className="select-box">
-          <select value={color} onChange={(e) => setColor(e.target.value)}>
-            <option value="">Select Color</option>
-            <option value="pink">Pink</option>
-            <option value="ash">Ash</option>
-            <option value="red">Red</option>
-            <option value="yellow">Yellow</option>
-            <option value="blue">Blue</option>
-          </select>
-          <i className="icofont-rounded-down"></i>
+        {/** cart components */}
+        <div>
+            <from>
+                <div className='selected-product size'>
+                  <select value= {size} onChange={handleSizeChange}> 
+                      <option>select size</option>
+                      <option value="SM">SM</option>
+                      <option value="MB">MB</option>
+                      <option value="LG">LG</option>
+                      <option value="XL">XL</option>
+                      <option value="XXL">XXl</option>
+                  </select>
+                  <i className='icofont-rounded-down'></i>
+                </div>
+                <div className='selected-product color'>
+                  <select value= {color} onChange={handleColorChange}> 
+                      <option>select color</option>
+                      <option value="pink">pink</option>
+                      <option value="ash">ash</option>
+                      <option value="red">red</option>
+                      <option value="yellow">yellow</option>
+                      <option value="bule">bule</option>
+                  </select>
+                  <i className='icofont-rounded-down'></i>
+                </div>
+                <button> ADD CART </button>
+                 <div className='cart-plus-minus'>
+                    <div className='dec qtybutton'>-</div>
+                    <input  className='cart-plus-minus-box' type="text" name="qtybutton" id="qtybutton" value={prequantity} />
+                    <div className='inc qtybutton'>+</div>
+                 </div>
+            </from>
         </div>
-
-        {/* Quantity */}
-        <div className="cart-plus-minus">
-          <button type="button" onClick={decreaseQty}>-</button>
-          <input type="text" value={qty} readOnly />
-          <button type="button" onClick={increaseQty}>+</button>
-        </div>
-
-        <button type="button" className="lab-btn">
-          ADD TO CART
-        </button>
-      </form>
     </div>
-  );
-};
+  )
+}
 
-export default ProductDisplay;
+export default ProductDisplay
