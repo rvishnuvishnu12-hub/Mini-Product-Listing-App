@@ -1,5 +1,11 @@
 import { Link } from "react-router-dom";
 import React from "react";
+import cat1 from "../../assets/images/category/01.jpg";
+import cat2 from "../../assets/images/category/02.jpg";
+import cat3 from "../../assets/images/category/03.jpg";
+import cat4 from "../../assets/images/category/04.jpg";
+import cat5 from "../../assets/images/category/05.jpg";
+import cat6 from "../../assets/images/category/06.jpg";
 
 
 const subTitle = "Choose Any Products";
@@ -7,44 +13,16 @@ const title = "Buy Everything with Us";
 const btnText = "Get Started Now";
 
 
-const categoryList = [
-  {
-    imgUrl: "src/assets/images/category/01.jpg",
-    imgAlt: "category rajibraj91 rajibraj",
-    iconName: "icofont-brand-windows",
-    title: "DSLR Camera",
-  },
-  {
-    imgUrl: "src/assets/images/category/02.jpg",
-    imgAlt: "category rajibraj91 rajibraj",
-    iconName: "icofont-brand-windows",
-    title: "Shoes",
-  },
-  {
-    imgUrl: "src/assets/images/category/03.jpg",
-    imgAlt: "category rajibraj91 rajibraj",
-    iconName: "icofont-brand-windows",
-    title: "Photography",
-  },
-  {
-    imgUrl: "src/assets/images/category/04.jpg",
-    imgAlt: "category rajibraj91 rajibraj",
-    iconName: "icofont-brand-windows",
-    title: "Formal Dress",
-  },
-  {
-    imgUrl: "src/assets/images/category/05.jpg",
-    imgAlt: "category rajibraj91 rajibraj",
-    iconName: "icofont-brand-windows",
-    title: "Colorful Bags",
-  },
-  {
-    imgUrl: "src/assets/images/category/06.jpg",
-    imgAlt: "category rajibraj91 rajibraj",
-    iconName: "icofont-brand-windows",
-    title: "Home Decor",
-  },
+
+  const categoryList = [
+  { imgUrl: cat1, title: "DSLR Camera", iconName: "icofont-brand-windows" },
+  { imgUrl: cat2, title: "Shoes", iconName: "icofont-brand-windows" },
+  { imgUrl: cat3, title: "Photography", iconName: "icofont-brand-windows" },
+  { imgUrl: cat4, title: "Formal Dress", iconName: "icofont-brand-windows" },
+  { imgUrl: cat5, title: "Colorful Bags", iconName: "icofont-brand-windows" },
+  { imgUrl: cat6, title: "Home Decor", iconName: "icofont-brand-windows" },
 ];
+
 
 const HomeCategory = () => {
   return <div className="Category-section style-4 padding-tb">
