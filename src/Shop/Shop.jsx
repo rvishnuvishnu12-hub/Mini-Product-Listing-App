@@ -4,7 +4,7 @@ import Data from "../products.json";
 import ProductCards from "./ProductCards";
 import Pagination from "./Pagination";
 import Search from "./Search";
-import ShopCategory from "./Shopcategory";
+import ShopCategory from "./ShopCategory";
 const showResults = "showing 01 - 02 of 139 Results";
 
 const Shop = () => {
