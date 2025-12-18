@@ -12,12 +12,12 @@ import ProductDisplay from "./ProductDisplay";
 const SingleProduct = () => {
   const { id } = useParams();
 
-  // ✅ SAFELY FIND PRODUCT
+ 
   const product = productData.find(
     (p) => p.id?.toString().trim() === id?.toString().trim()
   );
 
-  // ✅ GUARD: prevent white screen
+ 
   if (!product) {
     return (
       <div style={{ padding: "50px", textAlign: "center" }}>
@@ -70,13 +70,11 @@ const SingleProduct = () => {
                   </div>
                 </div>
 
-                <div className="Review">Review</div>
+                
               </article>
             </div>
 
-            <div className="col-lg-4 col-12">
-              Right side
-            </div>
+            
 
           </div>
         </div>
