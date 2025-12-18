@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import avatarImg from "../assets/images/clients/avater.jpg";
 
 const title = "More Then 60,000 Customers";
 
@@ -7,41 +8,13 @@ const desc =
   "Buy products on your any device with our app & enjoy your time what you want. Just download & install & start to shopping";
 
 const clientsList = [
-  {
-    imgUrl: "/src/assets/images/clients/avater.jpg",
-    imgAlt: "education thumb rajibraj91 rajibraj",
-    text: "Join with Us",
-  },
-  {
-    imgUrl: "/src/assets/images/clients/avater.jpg",
-    imgAlt: "education thumb rajibraj91 rajibraj",
-    text: "Join with Us",
-  },
-  {
-    imgUrl: "/src/assets/images/clients/avater.jpg",
-    imgAlt: "education thumb rajibraj91 rajibraj",
-    text: "Join with Us",
-  },
-  {
-    imgUrl: "/src/assets/images/clients/avater.jpg",
-    imgAlt: "education thumb rajibraj91 rajibraj",
-    text: "Join with Us",
-  },
-  {
-    imgUrl: "/src/assets/images/clients/avater.jpg",
-    imgAlt: "education thumb rajibraj91 rajibraj",
-    text: "Join with Us",
-  },
-  {
-    imgUrl: "/src/assets/images/clients/avater.jpg",
-    imgAlt: "education thumb rajibraj91 rajibraj",
-    text: "Join with Us",
-  },
-  {
-    imgUrl: "/src/assets/images/clients/avater.jpg",
-    imgAlt: "education thumb rajibraj91 rajibraj",
-    text: "USA",
-  },
+  { imgUrl: avatarImg, imgAlt: "education thumb rajibraj91 rajibraj", text: "Join with Us" },
+  { imgUrl: avatarImg, imgAlt: "education thumb rajibraj91 rajibraj", text: "Join with Us" },
+  { imgUrl: avatarImg, imgAlt: "education thumb rajibraj91 rajibraj", text: "Join with Us" },
+  { imgUrl: avatarImg, imgAlt: "education thumb rajibraj91 rajibraj", text: "Join with Us" },
+  { imgUrl: avatarImg, imgAlt: "education thumb rajibraj91 rajibraj", text: "Join with Us" },
+  { imgUrl: avatarImg, imgAlt: "education thumb rajibraj91 rajibraj", text: "Join with Us" },
+  { imgUrl: avatarImg, imgAlt: "education thumb rajibraj91 rajibraj", text: "USA" },
 ];
 
 const LoactionSprade = () => {
@@ -60,7 +33,7 @@ const LoactionSprade = () => {
                     <span>{val.text}</span>
                     </Link>
                     <div className="client-thumb">
-                        <img src="{val.imgUrl}" alt="" />
+                      <img src={val.imgUrl} alt={val.imgAlt} />
                     </div>
                 </div>)
                 )}

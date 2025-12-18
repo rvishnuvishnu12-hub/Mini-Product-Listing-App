@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import app01 from '../assets/images/app/01.jpg'
+import app02 from '../assets/images/app/02.jpg'
 
 const btnText ="sign up for free";
 const title ="Show AnyTime &  Anywhere";
@@ -17,8 +19,8 @@ const AppSection = () => {
          </div>
          <div className='section-wrapper'>
             <ul className='lab-ul'>
-                <li><a href="#"><img src="/src/assets/images/app/01.jpg" alt="" /></a></li>
-                <li><a href="#"><img src="/src/assets/images/app/02.jpg" alt="" /></a></li>
+                <li><a href="#"><img src={app01} alt="" /></a></li>
+                <li><a href="#"><img src={app02} alt="" /></a></li>
             </ul>
          </div>
         </div>

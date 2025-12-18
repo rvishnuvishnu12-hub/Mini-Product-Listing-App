@@ -9,26 +9,20 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Autoplay } from "swiper/modules";
+import sponsor01 from "../assets/images/sponsor/01.png";
+import sponsor02 from "../assets/images/sponsor/02.png";
+import sponsor03 from "../assets/images/sponsor/03.png";
+import sponsor04 from "../assets/images/sponsor/04.png";
+import sponsor05 from "../assets/images/sponsor/05.png";
+import sponsor06 from "../assets/images/sponsor/06.png";
 
 const sponsorList = [
-  {
-    imgUrl: "/src/assets/images/sponsor/01.png",
-  },
-  {
-    imgUrl: "/src/assets/images/sponsor/02.png",
-  },
-  {
-    imgUrl: "/src/assets/images/sponsor/03.png",
-  },
-  {
-    imgUrl: "/src/assets/images/sponsor/04.png",
-  },
-  {
-    imgUrl: "/src/assets/images/sponsor/05.png",
-  },
-  {
-    imgUrl: "/src/assets/images/sponsor/06.png",
-  },
+  { imgUrl: sponsor01 },
+  { imgUrl: sponsor02 },
+  { imgUrl: sponsor03 },
+  { imgUrl: sponsor04 },
+  { imgUrl: sponsor05 },
+  { imgUrl: sponsor06 },
 ];
 
 const Sponsor = () => {
